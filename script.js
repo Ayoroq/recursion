@@ -11,4 +11,11 @@ function fibs(n) {
   return sequence;
 }
 
-console.log(fibs(8));
+// This is the fibonacci sequence using the recursive method
+function fibsRec(n) {
+    if (n === 0) return [0];
+    if (n === 1) return [0, 1];
+
+    let sequence = fibsRec(n - 1);
+    return sequence.concat([sequence[sequence.length - 1] + sequence[sequence.length - 2]]);
+}
